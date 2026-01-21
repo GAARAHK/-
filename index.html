@@ -2,7 +2,18 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="theme-color" content="#2C3E50" />
+    <meta name="description" content="剑网三助手 - 你的江湖百科与实战教练" />
+    
+    <!-- PWA Settings -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="剑网三助手" />
+    <link rel="apple-touch-icon" href="https://img.icons8.com/external-flaticons-flat-flat-icons/192/external-swords-history-flaticons-flat-flat-icons.png" />
+
     <title>JX3 Companion - 剑网三助手</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -18,6 +29,25 @@
               'jx3-gold': '#D4AF37',
               'jx3-ink': '#2C3E50',
               'jx3-paper': '#F5F5DC',
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-in',
+              'bounce-short': 'bounceShort 0.5s ease-in-out 2',
+              'shrink': 'shrinkWidth linear forwards',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              bounceShort: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-10px)' },
+              },
+              shrinkWidth: {
+                '0%': { width: '100%' },
+                '100%': { width: '0%' },
+              }
             }
           }
         }
@@ -29,6 +59,7 @@
         background-color: #fcfbf9; /* Paper-like off-white */
         background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
         background-size: 20px 20px;
+        overscroll-behavior-y: none; /* Prevent pull-to-refresh on mobile app feel */
       }
       /* Custom scrollbar */
       ::-webkit-scrollbar {

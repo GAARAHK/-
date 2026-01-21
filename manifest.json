@@ -1,0 +1,21 @@
+{
+  "short_name": "剑网三助手",
+  "name": "JX3 Companion - 剑网三江湖助手",
+  "icons": [
+    {
+      "src": "https://img.icons8.com/external-flaticons-flat-flat-icons/192/external-swords-history-flaticons-flat-flat-icons.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://img.icons8.com/external-flaticons-flat-flat-icons/512/external-swords-history-flaticons-flat-flat-icons.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2C3E50",
+  "background_color": "#fcfbf9",
+  "orientation": "portrait-primary"
+}
